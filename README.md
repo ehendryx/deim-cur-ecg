@@ -9,6 +9,7 @@ The generation and analysis of the synthetic data can be carried out without dep
 The real data studied in this repository includes the MIT-BIH Arrhythmia Database [1], the Massachusets General Hospital-Marquette Foundation (MGH-MF) Waveform Database [2], and the St. Petersburg Institute of Cardiological Technics (Incart) 12-lead Arrhythmia Database. All three of these data sets are availble through PhysioNet [3]. In addition to needing the .mat, .info, and rr.txt files from each record of these databases, the matrix constructor codes require the user to incorpate code from the plotATM.m function [4]. Because the MGH-MF records are longer, it is recommended that users use the wfdb2mat.m function [5] in WFDB Toolbox for Matlab and Octave [6] to download the corresponding .mat files. Both plotATM.m and the WFDB Toolbox for Matlab and Octave are avaliable on PhysioNet [3].
 
 References:
+
 [1] Moody GB, Mark RG. The impact of the MIT-BIH Arrhythmia Database. IEEE Eng in Med and Biol 20(3):45-50 (May-June 2001). (PMID: 11446209)
 
 [2] Welch JP, Ford PJ, Teplick RS, Rubsamen RM. The Massachusetts General Hospital-Marquette Foundation Hemodynamic and Electrocardiographic Database -- Comprehensive collection of critical care waveforms. J Clinical Monitoring 7(1):96-97 (1991).
