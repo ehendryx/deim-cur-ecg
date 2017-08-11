@@ -1,5 +1,5 @@
 % This script applies DEIM CUR with incremental QR to the filtered MIT-BIH
-% Arrhythmia data matrices, testing different CUR tolerances an tracking
+% Arrhythmia data matrices, testing different CUR tolerances and tracking
 % which annotations are detected in each file.
 
 % This code can be run with and without considering flutter waves. To
@@ -128,7 +128,7 @@ for i = 1:48
     annotations.CUR_q = q; % indices of selected beats
     annotations.CUR_annote_count = annote_count; % number of beats selected from each annotation
     
-    % Save annotation trackign results
+    % Save annotation tracking results
     if no_flutter && strcmp(patient_ID_list{i},'207m')
         save([patient_ID_list{i} '_no_flutter_CUR_annotation_tracking'],'annotations')
     else

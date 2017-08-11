@@ -15,6 +15,10 @@
 % Part of this script (denoted below) is dependent on an
 % exerpt of the plotATM.m file available on PhysioNet. This code is not
 % included here.
+
+% Reference for plotATM.m:
+% Abdala, O., Hislop, H. (2014). "plotATM.m" (Version 1.1) [Computer code].
+% Available at https://physionet.org/cgi-bin/atm/ATM (Accessed March 30, 2016.)
 % ******************
 
 % Reference for the MIT-BIH Arrhythmia Database:
@@ -108,7 +112,7 @@ for pid = 1:48
     interval = [];
     val_update = 0; % Change this flag once additional code is added to update val
     
-    if isempty(interval) || isempty(val)
+    if isempty(interval) || val_update == 0
         display('The variables "interval" and "val" are dependent on code from plotATM.m available on PhysioNet: https://physionet.org/cgi-bin/atm/ATM')
     end
     
@@ -207,7 +211,8 @@ for pid = 1:48
     end
     
     % Store data in matrix format
-    data_matrix = zeros(length(trim_beat_start_index),150);
+    data_matrix1 = zeros(length(trim_beat_start_index),150);
+    data_matrix2 = zeros(length(trim_beat_start_index),150);
     time_matrix = zeros(length(trim_beat_start_index),150);
     for k = 1:length(trim_beat_start_index)
         segment_time = time((trim_beat_start_index(k)+trim-1):(trim_beat_end_index(k)+trim-1));
