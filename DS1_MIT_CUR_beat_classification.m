@@ -4,7 +4,7 @@
 
 % Note that this file can easily be edited to apply the same analysis to
 % the DS2 MIT-BIH Arrhythmia subset. Just make sure to read in the
-% appropriate files filtered data matrix files and that other file names
+% appropriate filtered data matrix files and that other file names
 % are changed to contain 'DS2' instead of 'DS1'.
 
 % Results are generated for the original PhysioNet annotations, as well as
